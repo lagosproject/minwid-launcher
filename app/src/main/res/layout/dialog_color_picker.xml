@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_text_color"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="16dp" />
+
+    <View
+        android:id="@+id/viewPreview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvHex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#FFFFFF"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Preset colors -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/presets"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutPresets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <View
+            android:id="@+id/presetWhite"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="#FFFFFFFF"
+            android:layout_marginEnd="6dp" />
+
+        <View
+            android:id="@+id/presetLightGray"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="#FFCCCCCC"
+            android:layout_marginEnd="6dp" />
+
+        <View
+            android:id="@+id/presetGray"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="#FF888888"
+            android:layout_marginEnd="6dp" />
+
+        <View
+            android:id="@+id/presetAccent"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="#FF00BCD4" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/color_red"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light" />
+
+    <SeekBar
+        android:id="@+id/seekRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/color_green"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light" />
+
+    <SeekBar
+        android:id="@+id/seekGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/color_blue"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light" />
+
+    <SeekBar
+        android:id="@+id/seekBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>
+

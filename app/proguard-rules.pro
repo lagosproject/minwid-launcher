@@ -1,0 +1,11 @@
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in /usr/lib/android-sdk/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the proguardFiles
+# directive in build.gradle.kts.
+
+# Keep ViewBinding classes
+-keep class com.minimallauncher.databinding.** { *; }
+
+# Keep AppInfo for JSON serialization
+-keep class com.minimallauncher.AppInfo { *; }

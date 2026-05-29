@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Strings -->
+    <string name="app_name">MinimalLauncher</string>
+    <string name="widget_hint">appui long pour ajouter un widget</string>
+    <string name="empty_shortcut">+</string>
+    <string name="search_hint">rechercher des applications…</string>
+    <string name="permission_needed">Autorisation requise</string>
+    <string name="permission_needed_calendar">Autorisation requise pour l\'agenda</string>
+    <string name="no_wellbeing_app">Aucune application Bien-être numérique trouvée</string>
+    <string name="no_usage_permission_error">Impossible d\'ouvrir les paramètres d\'accès aux données d\'usage</string>
+    <string name="no_clock_app">Aucune application d\'horloge trouvée</string>
+    <string name="change_shortcuts_hint">Modifier les raccourcis dans les paramètres</string>
+    <string name="usage_access_required">Accès aux données d\'usage requis pour le compteur d\'écran</string>
+    <string name="calendar_permission_required">Autorisation d\'agenda requise</string>
+    <string name="settings_saved">Paramètres enregistrés</string>
+
+    <!-- Calendar Date formatting -->
+    <string name="calendar_today">Aujourd\'hui, %s</string>
+    <string name="calendar_tomorrow">Demain, %s</string>
+
+    <!-- Layout/Settings Strings -->
+    <string name="settings_title">PARAMÈTRES</string>
+    <string name="layout_category">Disposition</string>
+    <string name="app_drawer_text_size">Taille du texte du tiroir d\'applications (sp)</string>
+    <string name="home_shortcut_text_size">Taille du texte du raccourci d\'accueil (sp)</string>
+    <string name="widget_area_height">Hauteur de la zone du widget (dp)</string>
+    <string name="show_battery_indicator">Afficher l\'indicateur de batterie</string>
+    <string name="colors_category">Couleurs</string>
+    <string name="use_wallpaper_colors">Utiliser les couleurs du fond d\'écran</string>
+    <string name="custom_text_color">Couleur de texte personnalisée (Hex: #FFFFFF)</string>
+    <string name="information_category">Informations</string>
+    <string name="show_screen_usage">Afficher l\'utilisation de l\'écran</string>
+    <string name="show_calendar_events">Afficher les événements de l\'agenda</string>
+    <string name="home_shortcuts_category">Raccourcis d\'accueil</string>
+    <string name="shortcut_1">Raccourci 1</string>
+    <string name="shortcut_2">Raccourci 2</string>
+    <string name="shortcut_3">Raccourci 3</string>
+    <string name="shortcut_4">Raccourci 4</string>
+    <string name="remove_widget">SUPPRIMER LE WIDGET</string>
+    <string name="set_default_launcher">DÉFINIR COMME LANCEUR PAR DÉFAUT</string>
+    <string name="save_changes">ENREGISTRER LES MODIFICATIONS</string>
+
+    <!-- Color Picker Dialog Strings -->
+    <string name="pick_text_color">Choisir la couleur du texte</string>
+    <string name="presets">Prédifinis</string>
+    <string name="color_red">Rouge</string>
+    <string name="color_green">Vert</string>
+    <string name="color_blue">Bleu</string>
+</resources>

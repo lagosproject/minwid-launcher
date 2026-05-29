@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/batteryProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:max="100"
+        android:progress="50"
+        app:indicatorSize="24dp"
+        app:trackThickness="2dp"
+        app:indicatorColor="@color/text_secondary"
+        app:trackColor="#33FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUsage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4h 6m"
+        android:textColor="#CCFFFFFF"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-light"
+        android:visibility="visible"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="@id/batteryProgress"
+        app:layout_constraintBottom_toBottomOf="@id/batteryProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="4dp" />
+
+    <TextClock
+        android:id="@+id/tvClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format24Hour="HH:mm"
+        android:format12Hour="hh:mm"
+        android:textSize="80sp"
+        android:textColor="#FFFFFFFF"
+        android:fontFamily="sans-serif-thin"
+        android:letterSpacing="0.05"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/tvNextEvent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_goneMarginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvNextEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#80FFFFFF"
+        android:fontFamily="sans-serif-light"
+        android:letterSpacing="0.05"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/batteryProgress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#CCFFFFFF"
+        android:fontFamily="sans-serif-light"
+        android:letterSpacing="0.1"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/tvClock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/widgetContainer"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:background="@drawable/widget_bg"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/tvDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvWidgetHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/widget_hint"
+        android:textColor="#80FFFFFF"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light"
+        android:letterSpacing="0.15"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="@id/widgetContainer"
+        app:layout_constraintBottom_toBottomOf="@id/widgetContainer"
+        app:layout_constraintStart_toStartOf="@id/widgetContainer"
+        app:layout_constraintEnd_toEndOf="@id/widgetContainer"/>
+
+    <LinearLayout
+        android:id="@+id/shortcutsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/shortcut0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="@string/empty_shortcut"/>
+
+            <TextView
+                android:id="@+id/shortcut1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="@string/empty_shortcut"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/shortcut2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="@string/empty_shortcut"/>
+
+            <TextView
+                android:id="@+id/shortcut3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:text="@string/empty_shortcut"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/gestureOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/shortcutsContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

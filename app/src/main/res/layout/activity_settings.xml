@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-thin"
+            android:letterSpacing="0.2"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Layout section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/layout_category"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/settings_card"
+            android:layout_marginBottom="16dp">
+
+            <!-- App Drawer Text Size -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_drawer_text_size"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <EditText
+                android:id="@+id/etAppDrawerTextSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/text_dim"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Home Shortcut Text Size -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_shortcut_text_size"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <EditText
+                android:id="@+id/etHomeShortcutTextSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/text_dim"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Widget Area Height -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/widget_area_height"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <EditText
+                android:id="@+id/etWidgetHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/text_dim"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Battery Indicator Visibility -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/show_battery_indicator"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swBatteryBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/white"
+                    app:trackTint="@color/text_dim"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Colors section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/colors_category"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/settings_card"
+            android:layout_marginBottom="16dp">
+
+            <!-- Use Default Colors -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/use_wallpaper_colors"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swDefaultColors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/white"
+                    app:trackTint="@color/text_dim"/>
+            </LinearLayout>
+
+            <!-- Custom Text Color -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_text_color"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"/>
+
+            <EditText
+                android:id="@+id/etCustomColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/text_dim"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:clickable="true"/>
+        </LinearLayout>
+
+        <!-- Usage & Events section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/information_category"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/settings_card"
+            android:layout_marginBottom="16dp">
+
+            <!-- Screen Usage Counter -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/show_screen_usage"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swUsageCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/white"
+                    app:trackTint="@color/text_dim"/>
+            </LinearLayout>
+
+            <!-- Calendar Events -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/show_calendar_events"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swCalendarEvents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/white"
+                    app:trackTint="@color/text_dim"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Shortcuts section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_shortcuts_category"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/settings_card"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnShortcut0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shortcut_1"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnShortcut1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shortcut_2"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnShortcut2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shortcut_3"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnShortcut3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shortcut_4"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.05"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRemoveWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/remove_widget"
+            android:textColor="@color/white"
+            android:backgroundTint="#AA0000"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnSetDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/set_default_launcher"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/text_secondary"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_changes"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

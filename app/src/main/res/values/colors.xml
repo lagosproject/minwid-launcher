@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#000000</color>
+    <color name="drawer_bg">#E6000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+    <color name="text_dim">#555555</color>
+    <color name="widget_border">#222222</color>
+    <color name="accent">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
